@@ -26,13 +26,31 @@
 
 h1 {
     font-family: "Qwitcher Grypen";
-    font-size: 4em;
+    font-size: 128px;
 }
 
 body {
     font-family: "Source Sans Pro", "Helvetica", "Arial";
+    font-size: 16px;
+    margin: 4px 16px;
 }
 
 h2 {
     font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+p {
+    margin-bottom: 32px;
+}
+
+ul {
+    margin-bottom: 32px;
+    margin-left: 16px;
+    list-style-type: disc;
+}
+
+li {
+    margin-bottom: 16px;
 }
