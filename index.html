@@ -6,30 +6,65 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <h1>Pass Bakery</h1>
-        <h2>Bakery Hours:</h2> 
-        <p>Mon-Fri 6AM-5PM PT,<br>Sat-Sun 7AM-4PM PT</p>
-        <h2>Coffee:</h2>
-        <ul>
-            <li>Espresso: $2.75</li>
-            <li>Cappuccino: $3.50</li>
-            <li>Latte: $4.00</li>
-            <li>Drip: $2.50</li>
-            <li>Pour Over: $4.75</li>
-        </ul>
-        <h2>Breakfast:</h2>
-        <ul>
-            <li>Oatmeal: $4.00</li>
-            <li>Toast: $3.50</li>
-            <li>Egg Sandwich: $5.50</li>
-            <li>Egg and Cheese Sandwich: $6.50</li>
-        </ul>
-        <h2>Breads:</h2>
-        <ul>
-            <li>Pain de campagne: $7.00</li>
-            <li>Olive and lemon: $7.50</li>
-            <li>Brioche: $8.00</li>
-            <li>Ciabatta: $5.50</li>
-        </ul>
+        <div id="head-container">
+            <div id="title-hours">
+                <img src="src/images/1p-site-logo.svg" alt="one pass logo">
+                <h1>Pass Bakery</h1>
+                <p>620 N 25th St, San Francisco, CA</p>
+                <h2>Bakery Hours:</h2> 
+                <p>Mon-Fri 6AM-5PM PT,<br>Sat-Sun 7AM-4PM PT</p>
+            </div>
+            <img id="bread-image" src="src/images/bread.jpeg" alt="fresh baked bread">
+        </div>
+        <hr>
+        <div id="items-container">
+            <h2>Coffee</h2>
+            <ul>
+                <li>
+                    <button name="espresso">
+                        <span id="button-title">Espresso</span><br>
+                        <span id="button-price">$2.75</span>
+                    </button>
+                </li>
+                <li>
+                    <button name="cappuccino">
+                        <span id="button-title">Cappuccino</span><br>
+                        <span id="button-price">$3.50</span>
+                    </button>
+                </li>
+                <li>
+                    <button name="latte">
+                        <span id="button-title">Latte</span><br>
+                        <span id="button-price">$4.00</span>
+                    </button>
+                </li>
+                <li>
+                    <button name="drip">
+                        <span id="button-title">Drip</span><br>
+                        <span id="button-price">$2.50</span>
+                    </button>
+                </li>
+                <li>
+                    <button name="pour-over">
+                        <span id="button-title">Pour Over</span><br>
+                        <span id="button-price">$4.75</span>
+                    </button>
+                </li>
+            </ul>
+            <h2>Breakfast</h2>
+            <ul>
+                <li><button name="oatmeal">Oatmeal: $4.00</button></li>
+                <li><button name="toast">Toast: $3.50</button></li>
+                <li><button name="egg-sandwich">Egg Sandwich: $5.50</button></li>
+                <li><button name="egg-cheese-sandwich">Egg and Cheese Sandwich: $6.50</button></li>
+            </ul>
+            <h2>Breads</h2>
+            <ul>
+                <li><button name="pain-campagne">Pain de campagne: $7.00</button></li>
+                <li><button name="olive-lemon">Olive and lemon: $7.50</button></li>
+                <li><button name="brioche">Brioche: $8.00</button></li>
+                <li><button name="ciabatta">Ciabatta: $5.50</button></li>
+            </ul>
+        </div>
     </body>
 </html>
