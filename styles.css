@@ -34,6 +34,8 @@
     display:flex;
     flex-direction: column;
     align-items: stretch;
+    margin: 16px auto;
+    width: 72%;
 }
 
 #bread-image {
@@ -48,13 +50,21 @@ h1 {
 body {
     font-family: "Source Sans Pro", "Helvetica", "Arial";
     font-size: 16px;
-    margin: 4px 16px;
+    margin: auto;
+}
+
+hr {
+    color: black;
 }
 
 h2 {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+}
+
+#menu-title {
+    margin-left: 32px;
 }
 
 p {
@@ -64,14 +74,14 @@ p {
 ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 32px;
-    margin-left: 16px;
     list-style-type: none;
 }
 
 li {
-    width: 40%;
-    margin: 16px;
+    width: 48%;
+    margin: 8px;
 }
 
 button {
@@ -79,6 +89,10 @@ button {
     background-color: white;
     border: 2px solid lightgray;
     border-radius: 4px;
+}
+
+button:hover {
+    background-color: lightgray;
 }
 
 #button-title {
