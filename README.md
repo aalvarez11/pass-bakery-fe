@@ -1,21 +1,94 @@
 # pass-bakery-fe
 front end repository for the pass-bakery bootcamp project
 
-## Challenge 3
+## Challenge 4
 
 ### Description
-In exercise 2, we made some very basic styles for our menu. For exercise 3, we're going to up our game a few notches with many custom styles. Our menu will morph from a simple paper menu into an online order form like _Toast Tab_.
-
+In exercise 4, we will begin to learn React.
 Steps we will take are
-* Make our lists appear in two columns
-* Add buttons to each 
-* Style text content
+* Start by installing React with NPM 
+* Port the HTML from exercise 3 into the file App.js
+* Move your CSS to App.css
 
 ### Technical Considerations
-As stated above, we will be loosely mimicking the popular online ordering tool, Toast Tab. Here is are some example bakery Toast Tab order pages
-`https://www.toasttab.com/sub-rosa-bakery-620-n-25th-st/v3/`
-`https://www.toasttab.com/tatte-bakery-clarendon/v3/`
+In future exercises we will break down the contents of App.js into several smaller components.
 
-Check the directory exercises/images for image files to use in your page.
 
-For the purposes of this exercise all numeric CSS values should be set to `0`, `1`, `2`, `4` or a multiple of `8`. This will make it easier for you to choose the correct values that matchh the mock. It will give you practice working within the rules of a larger design system.
+### Design Mock
+exercise-4-mock.png
+
+
+## React boilerplate
+The following is the standard readme content for any new React project.
+
+
+# Getting Started with Create React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
