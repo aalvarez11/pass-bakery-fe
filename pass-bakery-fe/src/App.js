@@ -4,11 +4,6 @@ import './App.css';
 
 function App() {
   return (
-    <html>
-    <head>
-        <meta charset="UTF-8"/>
-        <title>Pass Bakery</title>
-    </head>
     <body>
         <div id="head-container">
             <div id="title-hours">
@@ -111,8 +106,6 @@ function App() {
             </ul>
         </div>
     </body>
-</html>
-
   );
 }
 
