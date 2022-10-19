@@ -1,21 +1,21 @@
 # pass-bakery-fe
 front end repository for the pass-bakery bootcamp project
 
-## Challenge 4
+## Challenge 5
 
 ### Description
-In exercise 4, we will begin to learn React.
+In exercise 5, we will take advantage of components in React to break our page into small, easy to read chunks.
 Steps we will take are
-* Start by installing React with NPM 
-* Port the HTML from exercise 3 into the file App.js
-* Move your CSS to App.css
+* Consider how you would like to organize pieces of the page
+* Make a new directory for every component. This directory will have a JSX file for the template and CSS file for styles.
+* The page should look the same as it did in exercise 4.
 
 ### Technical Considerations
-In future exercises we will break down the contents of App.js into several smaller components.
+Use the JSON from ./src/data to populate the page.
 
 
 ### Design Mock
-exercise-4-mock.png
+exercise-5-mock.png
 
 
 ## React boilerplate
