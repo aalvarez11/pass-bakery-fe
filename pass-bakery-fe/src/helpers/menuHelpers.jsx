@@ -24,7 +24,19 @@ const menuHelpers = {
         const offerings = section.offerings;
 
         return (
-            null
+            <>
+                <h2 id="menu-title">{name}</h2>
+                <ul>
+                {offerings.map((item, idx) => (
+                    <li key={idx}>
+                    <button name={`${item.name}`}>
+                        <span id="button-title">{item.name}</span><br/>
+                        <span id="button-price">${item.price}</span>
+                    </button>
+                    </li>
+                ))}
+                </ul>
+            </>
         );
     },
     testPrint: function() {
