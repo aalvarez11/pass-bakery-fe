@@ -1,6 +1,17 @@
+import menuHelpers from '../helpers/menuHelpers.jsx';
+
 function CoffeeList() {
+
+    //menuHelpers.testPrint();
+
+    // index for coffee in menuData's menu array is 0
+    const coffeeSection = menuHelpers.getSection(0);
+    console.log(coffeeSection);
+
     return(
-        <ul>
+        <>
+            <h2 id="menu-title">Coffee</h2>
+            <ul>
                 <li>
                     <button name="espresso">
                         <span id="button-title">Espresso</span><br/>
@@ -32,6 +43,7 @@ function CoffeeList() {
                     </button>
                 </li>
             </ul>
+        </>
     );
 }
 
