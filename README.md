@@ -1,37 +1,23 @@
 # pass-bakery-fe
 front end repository for the pass-bakery bootcamp project
 
-## Challenge 1
+## Challenge 2
 
 ### Description
-Your first challenge is to mark up a page of the bakery menu. This exercise is not about making a pretty page. Rather, it is about showing understanding of semantic markup. Can you match the content displayed to the correct HTML tags? If you can, the user will be treated to a simple but highly usable page.
+Now that we have a basic menu made, let's practice  our CSS to make it look nice. We will do wth the following:
+* Add custom font for the header text 
+* Add system fonts to the stylesheet
+* Use CSS to apply the new fonts
+* Apply a CSS reset to make it clearer what we are styling on the page
+* Use CSS to custom style our new layout after applying the reset
 
-### Design Mock
-Found in the instructions [here](https://github.com/AudaxHealthInc/pass-bakery-fe/tree/exercise-1)
+### Technical Considerations
+Use the following to load the font onto your page. Apply this font to the header text.
+`https://fonts.googleapis.com/css?family=Qwitcher+Grypen`
 
-### Data
-This page should show the following
-Bakery Name: Pass Bakery<br>
-Bakery Hours: Mon-Fri 6AM-5PM PT, Sat-Sun 7AM-4PM PT<br>
-<br>
-Coffee:<br>
-Espresso: $2.75<br>
-Cappuccino: $3.50<br>
-Latte: $4.00<br>
-Drip: $2.50<br>
-Pour Over: $4.75<br>
-<br>
-Breakfast:<br>
-<br>
-Oatmeal: $4.00<br>
-Toast: $3.50<br>
-Egg Sandwich: $5.50<br>
-Egg and Cheese Sandwich: $6.50<br>
-<br>
-Breads:<br>
-<br>
-Pain de campagne: $7.00<br>
-Olive and lemon: $7.50<br>
-Brioche: $8.00<br>
-Ciabatta: $5.50<br>
+Make the rest of the page text Source Sans Pro, Helvetica or Arial, in that order.
 
+CSS reset files are popular for making the code we write more predicatble. Use the following reset in your page.
+`https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css`
+
+For the purposes of this exercise all numeric CSS values should be set to `0`, `1`, `2`, `4` or a multiple of `8`. This will make it easier for you to choose the correct values that matchh the mock. It will give you practice working within the rules of a larger design system.
