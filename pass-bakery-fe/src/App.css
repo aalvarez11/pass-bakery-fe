@@ -97,11 +97,11 @@ button:hover {
   background-color: lightgray;
 }
 
-#button-title {
+.button-title {
   font-weight: bold;
 }
 
-#button-price {
+.button-price {
   font-style: italic;
   color: gray;
 }
