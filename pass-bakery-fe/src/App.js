@@ -1,3 +1,4 @@
+import { menuData } from './data/menuData';
 import TitleNav from './components/TitleNav';
 import Menu from './components/Menu';
 import './App.css';
@@ -7,7 +8,7 @@ function App() {
     <>
       <TitleNav></TitleNav>
       <hr/>
-      <Menu></Menu>
+      <Menu data={menuData.menu}></Menu>
     </>
   );
 }
