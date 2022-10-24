@@ -1,9 +1,10 @@
-import menuHelpers from "../helpers/menuHelpers";
+import GetCategory from './GetCategory.jsx';
+import BuildCategoryList from './BuildCategoryList.jsx';
 
 function BreadList() {
     // index for breads in menuData's menu array is 2
-    const breadSection = menuHelpers.getSection(2);
-    const generatedHTML = menuHelpers.buildSection(breadSection);
+    const breadSection = GetCategory(2);
+    const generatedHTML = BuildCategoryList(breadSection);
 
     return(
         <>
