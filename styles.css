@@ -24,6 +24,24 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+#head-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 16px;
+}
+
+#items-container {
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 16px auto;
+    width: 72%;
+}
+
+#bread-image {
+    max-width: 400px;
+}
+
 h1 {
     font-family: "Qwitcher Grypen";
     font-size: 128px;
@@ -32,13 +50,21 @@ h1 {
 body {
     font-family: "Source Sans Pro", "Helvetica", "Arial";
     font-size: 16px;
-    margin: 4px 16px;
+    margin: auto;
+}
+
+hr {
+    color: black;
 }
 
 h2 {
     font-weight: bold;
     font-size: 24px;
-    margin-bottom: 16px;
+    margin-bottom: 4px;
+}
+
+#menu-title {
+    margin-left: 32px;
 }
 
 p {
@@ -46,11 +72,34 @@ p {
 }
 
 ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 32px;
-    margin-left: 16px;
-    list-style-type: disc;
+    list-style-type: none;
 }
 
 li {
-    margin-bottom: 16px;
+    width: 48%;
+    margin: 8px;
+}
+
+button {
+    width: 100%;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: lightgray;
+}
+
+#button-title {
+    font-weight: bold;
+}
+
+#button-price {
+    font-style: italic;
+    color: gray;
 }
