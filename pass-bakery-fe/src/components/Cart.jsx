@@ -3,9 +3,10 @@ import styled from "styled-components";
 const StyledCartPanel = styled.div`
   display: flex;
   flex-direction: column;
+
   box-sizing: border-box;
   min-height: 100%;
-  height: 100%;
+  height: auto;
   top: 0;
   right: 0;
   border-left: 2px solid lightgray;
@@ -18,12 +19,14 @@ const StyledHeader = styled.h2`
   margin-bottom: 4px;
 `;
 
-const StyledItemContainer = styled.div``;
+const StyledItemContainer = styled.div`
+  min-height: 200px;
+`;
 
 const StyledParagraph = styled.p`
   font-weight: bold;
   margin-left: 32px;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 `;
 
 const StyledCheckoutButton = styled.button`
