@@ -7,6 +7,7 @@ const StyledTitleContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   padding: 16px;
+  border-bottom: 1px solid lightgray;
 `;
 
 const StyledTitle = styled.h1`
