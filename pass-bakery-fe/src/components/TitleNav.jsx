@@ -55,7 +55,7 @@ class TitleNav extends React.Component {
     let closedMessage = "";
 
     if (
-      ((this.state.currDay == 0 || this.state.currDay == 6) &&
+      ((this.state.currDay === 0 || this.state.currDay === 6) &&
         (this.state.currHour < 7 || this.state.currHour > 15)) ||
       (this.state.currDay > 0 &&
         this.state.currDay < 6 &&
