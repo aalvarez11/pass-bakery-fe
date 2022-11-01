@@ -1,5 +1,5 @@
-import './App.css';
-import Bakery from './components/Bakery';
+import "./App.css";
+import Bakery from "./components/Bakery";
 
 function App() {
   return (
