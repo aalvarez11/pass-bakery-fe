@@ -5,9 +5,9 @@ import styled from "styled-components";
 
 const StyledContainer = styled.div``;
 
-const StyledHorizontalRule = styled.hr`
-  border-color: lightgray;
-`;
+// const StyledHorizontalRule = styled.hr`
+//   border-color: lightgray;
+// `;
 
 function BakeryMain(props) {
   const menuObj = {};
