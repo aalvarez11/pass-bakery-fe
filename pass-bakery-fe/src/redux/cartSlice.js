@@ -17,14 +17,14 @@ const cartSlice = createSlice({
       if (itemExists === undefined) {
         state.cartItems.push(action.payload);
       }
-      cartQuantity++;
-      cartTotal += parseFloat(action.payload.price);
+      state.itemQuantity++;
+      state.total += parseFloat(action.payload.price);
     },
     removeItem(state, action) {
       const idx = state.cartItems.indexOf(action.payload.name);
       state.cartItems.splice(idx, 1);
-      cartQuantity--;
-      cartTotal -= parseFloat(action.payload.price);
+      state.itemQuantity--;
+      state.total -= parseFloat(action.payload.price);
     },
   },
 });
