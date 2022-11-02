@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Cart from "./Cart";
 import BakeryMain from "./BakeryMain";
 import styled from "styled-components";
@@ -14,10 +15,12 @@ const StyledTopDiv = styled.div`
 `;
 
 function Bakery() {
+  const [cartItems, setCartItems] = useState([]);
+
   return (
     <StyledTopDiv>
       <BakeryMain className="bakery-main"></BakeryMain>
-      <Cart className="cart"></Cart>
+      <Cart className="cart" cartItems={cartItems}></Cart>
     </StyledTopDiv>
   );
 }
