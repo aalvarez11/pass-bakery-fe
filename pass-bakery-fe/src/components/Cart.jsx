@@ -1,4 +1,7 @@
 import styled from "styled-components";
+import { useSelector } from "react-redux";
+import CartItem from "./CartItem";
+import { formatCurrency } from "../helpers/formatCurrency";
 
 const StyledCartPanel = styled.div`
   display: flex;
@@ -46,14 +49,19 @@ const StyledCheckoutButton = styled.button`
 `;
 
 function Cart(props) {
+  const { cartItems, itemQuantity, total } = useSelector((state) => state.cart);
+  const cartTotal = formatCurrency(total);
+
   return (
     <StyledCartPanel className={props.className}>
       <StyledHeader>Your Order</StyledHeader>
-      <StyledItemContainer></StyledItemContainer>
-      <StyledParagraph>Your total is:</StyledParagraph>
-      <StyledCheckoutButton>
-        Checkout (<span>0</span>)
-      </StyledCheckoutButton>
+      <StyledItemContainer>
+        {cartItems.map((item) => {
+          return <CartItem key={item.name} {...item}></CartItem>;
+        })}
+      </StyledItemContainer>
+      <StyledParagraph>Your total is: {cartTotal}</StyledParagraph>
+      <StyledCheckoutButton>Checkout ({itemQuantity})</StyledCheckoutButton>
     </StyledCartPanel>
   );
 }
