@@ -49,7 +49,7 @@ function BuildCategoryList(section) {
       <StyledList>
         {offerings.map((item, idx) => (
           <StyledListItem key={idx}>
-            <StyledItemButton>
+            <StyledItemButton onClick={() => this.props.addToCart(item)}>
               <StyledButtonTitle>{item.name}</StyledButtonTitle>
               <br />
               <StyledButtonPrice>${item.price}</StyledButtonPrice>
