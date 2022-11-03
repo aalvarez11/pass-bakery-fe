@@ -5,12 +5,11 @@ import styled from "styled-components";
 
 const StyledTopDiv = styled.div`
   display: flex;
-
   .bakery__main {
-    flex-grow: 6;
+    flex-grow: 4;
   }
   .bakery__cart {
-    flex-grow: 3;
+    flex-grow: 2;
   }
 `;
 
