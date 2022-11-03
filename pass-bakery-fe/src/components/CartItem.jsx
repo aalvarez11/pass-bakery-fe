@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { formatCurrency } from "../helpers/formatCurrency";
 
 const StyledItemContainer = styled.div`
   display: flex;
@@ -13,11 +14,13 @@ const StyledRemoveButton = styled.p`
 `;
 
 function CartItem(item) {
+  const itemPrice = formatCurrency(item.price);
+
   return (
     <>
       <StyledItemContainer>
         <p className="cart-item__name">{item.name}</p>
-        <p>${item.price}</p>
+        <p>{itemPrice}</p>
       </StyledItemContainer>
       <StyledRemoveButton>remove</StyledRemoveButton>
     </>

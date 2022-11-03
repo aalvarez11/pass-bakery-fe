@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { formatCurrency } from "../helpers/formatCurrency";
 
 const StyledTitle = styled.h2`
   font-weight: bold;
@@ -52,7 +53,9 @@ function BuildCategoryList(section) {
             >
               <span className="itemButton__name">{item.name}</span>
               <br />
-              <span className="itemButton__price">${item.price}</span>
+              <span className="itemButton__price">
+                {formatCurrency(item.price)}
+              </span>
             </button>
           </StyledListItem>
         ))}
