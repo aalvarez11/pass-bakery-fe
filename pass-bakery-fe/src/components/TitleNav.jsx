@@ -5,10 +5,13 @@ import bread from "../images/bread.jpeg";
 
 const StyledTitleContainer = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 32px;
   border-bottom: 1px solid lightgray;
+  div.bakery__left {
+    margin-left: 128px;
+  }
   img.logo {
     max-height: 16px;
     width: auto;
@@ -25,6 +28,8 @@ const StyledTitleContainer = styled.div`
     margin-bottom: 4px;
   }
   img.bread {
+    margin-right: 128px;
+    margin-bottom: 32px;
     max-width: 512px;
     height: auto;
   }
@@ -61,7 +66,7 @@ class TitleNav extends React.Component {
 
     return (
       <StyledTitleContainer>
-        <div id="title-hours">
+        <div className="bakery__left">
           <img className="logo" src={logo} alt="the One Pass logo" />
           <h1 className="title">Pass Bakery</h1>
           <h2 className="title--hours">Hours</h2>

@@ -6,9 +6,9 @@ import { formatCurrency } from "../helpers/formatCurrency";
 const StyledCartPanel = styled.div`
   display: flex;
   flex-direction: column;
-
   box-sizing: border-box;
   min-height: 100%;
+  min-width: 24%;
   height: auto;
   top: 0;
   right: 0;
@@ -16,7 +16,8 @@ const StyledCartPanel = styled.div`
   h2.cart__title {
     font-weight: bold;
     font-size: 24px;
-    margin-left: 32px;
+    margin-left: 24px;
+    margin-top: 32px;
     margin-bottom: 4px;
   }
   div.cart__items {
@@ -26,8 +27,8 @@ const StyledCartPanel = styled.div`
     display: flex;
     justify-content: space-between;
     font-weight: bold;
-    margin-left: 32px;
-    margin-right: 32px;
+    margin-left: 24px;
+    margin-right: 24px;
     margin-bottom: 8px;
   }
   button.cart__checkout {

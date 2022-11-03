@@ -7,8 +7,7 @@ const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 4px auto;
-  width: 80%;
+  margin: 4px 128px;
 `;
 
 function Menu(props) {

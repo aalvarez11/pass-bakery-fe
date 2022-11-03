@@ -4,7 +4,7 @@ import { formatCurrency } from "../helpers/formatCurrency";
 const StyledTitle = styled.h2`
   font-weight: bold;
   font-size: 24px;
-  margin-left: 32px;
+  margin-top: 16px;
   margin-bottom: 4px;
 `;
 
@@ -13,12 +13,14 @@ const StyledList = styled.ul`
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 32px;
+  padding-left: 0px;
   list-style-type: none;
 `;
 
 const StyledListItem = styled.li`
-  width: 48%;
-  margin: 8px;
+  width: 512px;
+  margin-top: 8px;
+  margin-bottom: 8px;
   button.itemButton {
     width: 100%;
     background-color: white;
