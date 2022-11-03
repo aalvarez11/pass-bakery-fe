@@ -18,25 +18,22 @@ const StyledList = styled.ul`
 const StyledListItem = styled.li`
   width: 48%;
   margin: 8px;
-`;
-
-const StyledItemButton = styled.button`
-  width: 100%;
-  background-color: white;
-  border: 2px solid lightgray;
-  border-radius: 4px;
-  &:hover {
-    background-color: lightgray;
+  button.itemButton {
+    width: 100%;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    &:hover {
+      background-color: lightgray;
+    }
+    span.itemButton__name {
+      font-weight: bold;
+    }
+    span.itemButton__price {
+      font-style: italic;
+      color: gray;
+    }
   }
-`;
-
-const StyledButtonTitle = styled.span`
-  font-weight: bold;
-`;
-
-const StyledButtonPrice = styled.span`
-  font-style: italic;
-  color: gray;
 `;
 
 function BuildCategoryList(section) {
@@ -49,11 +46,14 @@ function BuildCategoryList(section) {
       <StyledList>
         {offerings.map((item, idx) => (
           <StyledListItem key={idx}>
-            <StyledItemButton onClick={() => this.props.addToCart(item)}>
-              <StyledButtonTitle>{item.name}</StyledButtonTitle>
+            <button
+              className="itemButton"
+              onClick={() => this.props.addToCart(item)}
+            >
+              <span className="itemButton__name">{item.name}</span>
               <br />
-              <StyledButtonPrice>${item.price}</StyledButtonPrice>
-            </StyledItemButton>
+              <span className="itemButton__price">${item.price}</span>
+            </button>
           </StyledListItem>
         ))}
       </StyledList>

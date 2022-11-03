@@ -6,10 +6,10 @@ import styled from "styled-components";
 const StyledTopDiv = styled.div`
   display: flex;
 
-  .bakery-main {
+  .bakery__main {
     flex-grow: 6;
   }
-  .cart {
+  .bakery__cart {
     flex-grow: 3;
   }
 `;
@@ -19,8 +19,8 @@ function Bakery() {
 
   return (
     <StyledTopDiv>
-      <BakeryMain className="bakery-main"></BakeryMain>
-      <Cart className="cart" cartItems={cartItems}></Cart>
+      <BakeryMain className="bakery__main"></BakeryMain>
+      <Cart className="bakery__cart" cartItems={cartItems}></Cart>
     </StyledTopDiv>
   );
 }

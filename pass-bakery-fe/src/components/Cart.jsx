@@ -13,38 +13,34 @@ const StyledCartPanel = styled.div`
   top: 0;
   right: 0;
   border-left: 2px solid lightgray;
-`;
-
-const StyledHeader = styled.h2`
-  font-weight: bold;
-  font-size: 24px;
-  margin-left: 32px;
-  margin-bottom: 4px;
-`;
-
-const StyledItemContainer = styled.div`
-  min-height: 200px;
-`;
-
-const StyledParagraph = styled.p`
-  font-weight: bold;
-  margin-left: 32px;
-  margin-bottom: 8px;
-`;
-
-const StyledCheckoutButton = styled.button`
-  background-color: darkolivegreen;
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  width: 100%;
-  text-align: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: white;
-  border: none;
-  &:hover {
-    background-color: olivedrab;
+  h2.cart__title {
+    font-weight: bold;
+    font-size: 24px;
+    margin-left: 32px;
+    margin-bottom: 4px;
+  }
+  div.cart__items {
+    min-height: 200px;
+  }
+  p.cart__total {
+    font-weight: bold;
+    margin-left: 32px;
+    margin-bottom: 8px;
+  }
+  button.cart__checkout {
+    background-color: darkolivegreen;
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    color: white;
+    border: none;
+    &:hover {
+      background-color: olivedrab;
+    }
   }
 `;
 
@@ -54,14 +50,14 @@ function Cart(props) {
 
   return (
     <StyledCartPanel className={props.className}>
-      <StyledHeader>Your Order</StyledHeader>
-      <StyledItemContainer>
+      <h2 className="cart__title">Your Order</h2>
+      <div className="cart__items">
         {cartItems.map((item) => {
           return <CartItem key={item.name} {...item}></CartItem>;
         })}
-      </StyledItemContainer>
-      <StyledParagraph>Your total is: {cartTotal}</StyledParagraph>
-      <StyledCheckoutButton>Checkout ({itemQuantity})</StyledCheckoutButton>
+      </div>
+      <p className="cart__total">Your total is: {cartTotal}</p>
+      <button className="cart__checkout">Checkout ({itemQuantity})</button>
     </StyledCartPanel>
   );
 }

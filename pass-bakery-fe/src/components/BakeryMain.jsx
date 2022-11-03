@@ -1,13 +1,6 @@
 import { menuData } from "../data/menuData";
 import TitleNav from "./TitleNav";
 import Menu from "./Menu";
-import styled from "styled-components";
-
-const StyledContainer = styled.div``;
-
-// const StyledHorizontalRule = styled.hr`
-//   border-color: lightgray;
-// `;
 
 function BakeryMain(props) {
   const menuObj = {};
@@ -16,10 +9,10 @@ function BakeryMain(props) {
   });
 
   return (
-    <StyledContainer className={props.className}>
+    <div className={props.className}>
       <TitleNav></TitleNav>
       <Menu data={menuObj}></Menu>
-    </StyledContainer>
+    </div>
   );
 }
 

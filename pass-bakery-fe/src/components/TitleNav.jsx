@@ -9,33 +9,28 @@ const StyledTitleContainer = styled.div`
   padding-top: 16px;
   padding-bottom: 16px;
   border-bottom: 1px solid lightgray;
-`;
-
-const StyledLogo = styled.img`
-  max-height: 16px;
-  width: auto;
-`;
-
-const StyledTitle = styled.h1`
-  margin: auto;
-  font-family: "Qwitcher Grypen";
-  font-weight: normal;
-  font-size: 128px;
-`;
-
-const StyledHours = styled.h2`
-  font-weight: bold;
-  font-size: 24px;
-  margin-bottom: 4px;
-`;
-
-const StyledBreadImage = styled.img`
-  max-width: 512px;
-  height: auto;
-`;
-
-const StyledInfo = styled.p`
-  margin-bottom: 32px;
+  img.logo {
+    max-height: 16px;
+    width: auto;
+  }
+  h1.title {
+    margin: auto;
+    font-family: "Qwitcher Grypen";
+    font-weight: normal;
+    font-size: 128px;
+  }
+  h2.title--hours {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  img.bread {
+    max-width: 512px;
+    height: auto;
+  }
+  p.info {
+    margin-bottom: 32px;
+  }
 `;
 
 class TitleNav extends React.Component {
@@ -67,17 +62,17 @@ class TitleNav extends React.Component {
     return (
       <StyledTitleContainer>
         <div id="title-hours">
-          <StyledLogo src={logo} alt="the One Pass logo" />
-          <StyledTitle>Pass Bakery</StyledTitle>
-          <StyledHours>Hours</StyledHours>
-          <StyledInfo>
+          <img className="logo" src={logo} alt="the One Pass logo" />
+          <h1 className="title">Pass Bakery</h1>
+          <h2 className="title--hours">Hours</h2>
+          <p className="info">
             Mon-Fri 6AM-5PM PT,
             <br />
             Sat-Sun 7AM-4PM PT
-          </StyledInfo>
-          <StyledInfo className="bakery-closed">{closedMessage}</StyledInfo>
+          </p>
+          <p className="info bakery-closed">{closedMessage}</p>
         </div>
-        <StyledBreadImage src={bread} alt="fresh baked bread" />
+        <img className="bread" src={bread} alt="fresh baked bread" />
       </StyledTitleContainer>
     );
   }
