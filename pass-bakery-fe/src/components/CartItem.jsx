@@ -4,7 +4,7 @@ import { formatCurrency } from "../helpers/formatCurrency";
 const StyledItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  p.cart-item__name {
+  p.cart__item {
     font-weight: bold;
   }
 `;
@@ -19,8 +19,10 @@ function CartItem(item) {
   return (
     <>
       <StyledItemContainer>
-        <p className="cart-item__name">{item.name}</p>
-        <p>{itemPrice}</p>
+        <p className="cart__item">
+          <span>{item.name}</span>
+          <span>{itemPrice}</span>
+        </p>
       </StyledItemContainer>
       <StyledRemoveButton>remove</StyledRemoveButton>
     </>

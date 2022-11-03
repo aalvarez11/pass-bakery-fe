@@ -23,8 +23,11 @@ const StyledCartPanel = styled.div`
     min-height: 200px;
   }
   p.cart__total {
+    display: flex;
+    justify-content: space-between;
     font-weight: bold;
     margin-left: 32px;
+    margin-right: 32px;
     margin-bottom: 8px;
   }
   button.cart__checkout {
@@ -56,7 +59,10 @@ function Cart(props) {
           return <CartItem key={item.name} {...item}></CartItem>;
         })}
       </div>
-      <p className="cart__total">Your total is: {cartTotal}</p>
+      <p className="cart__total">
+        <span>Your total is:</span>
+        <span>{cartTotal}</span>
+      </p>
       <button className="cart__checkout">Checkout ({itemQuantity})</button>
     </StyledCartPanel>
   );
