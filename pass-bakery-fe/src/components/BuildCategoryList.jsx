@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import { formatCurrency } from "../helpers/formatCurrency";
-import { addItem } from "../redux/cartSlice";
+import { addToCart } from "../redux/cartSlice";
 
 const StyledTitle = styled.h2`
   font-weight: bold;
@@ -44,7 +44,6 @@ const StyledListItem = styled.li`
 function BuildCategoryList(section) {
   const name = section.name;
   const offerings = section.offerings;
-  const cart = useSelector();
   const dispatch = useDispatch();
 
   return (
@@ -53,7 +52,12 @@ function BuildCategoryList(section) {
       <StyledList>
         {offerings.map((item, idx) => (
           <StyledListItem key={idx}>
-            <button className="itemButton" onClick={() => dispatch(addItem())}>
+            <button
+              className="itemButton"
+              onClick={() => {
+                dispatch(addToCart(item));
+              }}
+            >
               <span className="itemButton__name">{item.name}</span>
               <br />
               <span className="itemButton__price">
