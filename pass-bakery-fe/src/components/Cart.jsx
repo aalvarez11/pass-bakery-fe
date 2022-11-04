@@ -56,8 +56,8 @@ function Cart(props) {
     <StyledCartPanel className={props.className}>
       <h2 className="cart__title">Your Order</h2>
       <div className="cart__items">
-        {cartItems.map((item) => {
-          return <CartItem key={item.name} {...item}></CartItem>;
+        {cartItems.map((item, idx) => {
+          return <CartItem key={idx} itemId={idx} {...item}></CartItem>;
         })}
       </div>
       <p className="cart__total">
