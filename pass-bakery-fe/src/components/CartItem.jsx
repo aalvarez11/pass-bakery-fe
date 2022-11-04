@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { removeItem } from "../redux/cartSlice";
 import styled from "styled-components";
 import { formatCurrency } from "../helpers/formatCurrency";
 
@@ -11,10 +13,13 @@ const StyledItemContainer = styled.div`
 
 const StyledRemoveButton = styled.p`
   font-size: 0.8em;
+  color: darkolivegreen;
+  background-color: #c5caba;
 `;
 
 function CartItem(item) {
   const itemPrice = formatCurrency(item.price);
+  const dispatch = useDispatch();
 
   return (
     <>
@@ -24,7 +29,9 @@ function CartItem(item) {
           <span>{itemPrice}</span>
         </p>
       </StyledItemContainer>
-      <StyledRemoveButton>remove</StyledRemoveButton>
+      <StyledRemoveButton onClick={dispatch(removeItem(item.name))}>
+        remove
+      </StyledRemoveButton>
     </>
   );
 }
