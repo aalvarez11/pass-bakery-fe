@@ -24,6 +24,7 @@ const StyledRemoveButton = styled.p`
 function CartItem(item) {
   const itemPrice = formatCurrency(item.price);
   const dispatch = useDispatch();
+  const itemId = item.itemId;
 
   return (
     <>
@@ -33,7 +34,7 @@ function CartItem(item) {
       </StyledItemContainer>
       <StyledRemoveButton
         onClick={() => {
-          dispatch(removeItem(item.name));
+          dispatch(removeItem(itemId));
         }}
       >
         <span>remove</span>
