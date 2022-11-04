@@ -16,19 +16,11 @@ const cartSlice = createSlice({
       state.total += parseFloat(action.payload.price);
     },
     removeItem(state, action) {
-      const itemName = action.payload;
-      const itemPrice = state.cartItems.find(
-        (item) => item.name === itemName
-      ).price;
-      const numMatches = state.cartItems.reduce(
-        (n, item) => n + (item.name === itemName),
-        0
-      );
-      state.cartItems = state.cartItems.filter(
-        (item) => item.name !== itemName
-      );
-      state.itemQuantity -= numMatches;
-      state.total -= parseFloat(itemPrice) * numMatches;
+      const itemIdx = action.payload;
+      const itemPrice = state.cartItems[itemIdx].price;
+      state.cartItems.splice(itemIdx, 1);
+      state.itemQuantity--;
+      state.total -= parseFloat(itemPrice);
     },
   },
 });
