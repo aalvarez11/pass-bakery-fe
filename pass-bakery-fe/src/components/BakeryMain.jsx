@@ -4,7 +4,7 @@ import Menu from "./Menu";
 
 function BakeryMain(props) {
   const menuObj = {};
-  menuData.menu.forEach((item, idx) => {
+  menuData.menu.map((item, idx) => {
     menuObj[menuData.menu[idx].name] = item;
   });
 
