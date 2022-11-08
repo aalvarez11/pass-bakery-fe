@@ -24,7 +24,10 @@ const StyledListItem = styled.li`
   margin-top: 8px;
   margin-bottom: 8px;
   button.itemButton {
+    display: flex;
+    flex-direction: column;
     width: 100%;
+    padding: 8px;
     background-color: white;
     border: 2px solid lightgray;
     border-radius: 4px;
@@ -32,6 +35,8 @@ const StyledListItem = styled.li`
       background-color: lightgray;
     }
     span.itemButton__name {
+      margin-bottom: 8px;
+      font-size: large;
       font-weight: bold;
     }
     span.itemButton__price {
@@ -59,7 +64,6 @@ function BuildCategoryList(section) {
               }}
             >
               <span className="itemButton__name">{item.name}</span>
-              <br />
               <span className="itemButton__price">
                 {formatCurrency(item.price)}
               </span>
