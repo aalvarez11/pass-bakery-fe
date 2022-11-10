@@ -5,7 +5,7 @@ import Menu from "./Menu";
 function BakeryMain(props) {
   const menuObj = {};
   menuData.menu.map((item, idx) => {
-    return (menuObj[menuData.menu[idx].name] = item);
+    menuObj[menuData.menu[idx].name] = item;
   });
 
   return (
