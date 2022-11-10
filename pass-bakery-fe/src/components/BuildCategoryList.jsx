@@ -32,7 +32,8 @@ const StyledListItem = styled.li`
     border: 2px solid lightgray;
     border-radius: 4px;
     &:hover {
-      background-color: lightgray;
+      border: 2px solid darkolivegreen;
+      background-color: whitesmoke;
     }
     span.itemButton__name {
       margin-bottom: 8px;
