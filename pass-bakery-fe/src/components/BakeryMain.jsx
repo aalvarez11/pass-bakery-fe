@@ -5,12 +5,12 @@ import Menu from "./Menu";
 function BakeryMain(props) {
   const menuObj = {};
   menuData.menu.map((item, idx) => {
-    menuObj[menuData.menu[idx].name] = item;
+    return (menuObj[menuData.menu[idx].name] = item);
   });
 
   return (
     <div className={props.className}>
-      <TitleNav></TitleNav>
+      <TitleNav data={menuData.meta}></TitleNav>
       <Menu data={menuObj}></Menu>
     </div>
   );
