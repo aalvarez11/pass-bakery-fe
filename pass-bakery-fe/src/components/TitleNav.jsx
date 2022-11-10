@@ -53,31 +53,23 @@ class TitleNav extends React.Component {
 
   render() {
     let closedMessage = "";
+    const currDay = this.state.currDay;
+    const currHour = this.state.currHour;
     const bakeryHours = this.props.data.hours;
-    const bakeryCurrDay = bakeryHours[this.state.currDay];
+    const bakeryCurrDay = bakeryHours[currDay];
+    const dayDictionary = {
+      0: "Sun.",
+      1: "Mon.",
+      2: "Tues.",
+      3: "Weds.",
+      4: "Thurs.",
+      5: "Fri.",
+      6: "Sat.",
+    };
 
     if (
-      (this.state.currDay === 0 &&
-        this.state.currHour < bakeryCurrDay["Sun."].open &&
-        this.state.currHour > bakeryCurrDay["Sun."].close - 1) ||
-      (this.state.currDay === 1 &&
-        this.state.currHour < bakeryCurrDay["Mon."].open &&
-        this.state.currHour > bakeryCurrDay["Mon."].close - 1) ||
-      (this.state.currDay === 2 &&
-        this.state.currHour < bakeryCurrDay["Tues."].open &&
-        this.state.currHour > bakeryCurrDay["Tues."].close - 1) ||
-      (this.state.currDay === 3 &&
-        this.state.currHour < bakeryCurrDay["Weds."].open &&
-        this.state.currHour > bakeryCurrDay["Weds."].close - 1) ||
-      (this.state.currDay === 4 &&
-        this.state.currHour < bakeryCurrDay["Thurs."].open &&
-        this.state.currHour > bakeryCurrDay["Thurs."].close - 1) ||
-      (this.state.currDay === 5 &&
-        this.state.currHour < bakeryCurrDay["Fri."].open &&
-        this.state.currHour > bakeryCurrDay["Fri."].close - 1) ||
-      (this.state.currDay === 6 &&
-        this.state.currHour < bakeryCurrDay["Sat."].open &&
-        this.state.currHour > bakeryCurrDay["Sat."].close - 1)
+      currHour < bakeryCurrDay[dayDictionary[currDay]].open &&
+      currHour > bakeryCurrDay[dayDictionary[currDay]].close - 1
     ) {
       closedMessage = "BAKERY IS CLOSED.";
     }
