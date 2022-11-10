@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { removeItem } from "../redux/cartSlice";
 import styled from "styled-components";
-import { formatCurrency } from "../helpers/formatCurrency";
+import { formatCurrencyToUSD } from "../helpers/formatCurrencyToUSD";
 
 const StyledItemContainer = styled.p`
   display: flex;
@@ -22,7 +22,7 @@ const StyledRemoveButton = styled.p`
 `;
 
 function CartItem(item) {
-  const itemPrice = formatCurrency(item.price);
+  const itemPrice = formatCurrencyToUSD(item.price);
   const dispatch = useDispatch();
   const itemId = item.itemId;
 

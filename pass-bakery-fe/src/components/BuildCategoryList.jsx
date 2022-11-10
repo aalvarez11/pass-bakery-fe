@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import { formatCurrency } from "../helpers/formatCurrency";
+import { formatCurrencyToUSD } from "../helpers/formatCurrencyToUSD";
 import { addToCart } from "../redux/cartSlice";
 
 const StyledTitle = styled.h2`
@@ -66,7 +66,7 @@ function BuildCategoryList(section) {
             >
               <span className="itemButton__name">{item.name}</span>
               <span className="itemButton__price">
-                {formatCurrency(item.price)}
+                {formatCurrencyToUSD(item.price)}
               </span>
             </button>
           </StyledListItem>

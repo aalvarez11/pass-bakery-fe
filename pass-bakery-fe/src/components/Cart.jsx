@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { useSelector } from "react-redux";
 import CartItem from "./CartItem";
-import { formatCurrency } from "../helpers/formatCurrency";
+import { formatCurrencyToUSD } from "../helpers/formatCurrencyToUSD";
 
 const StyledCartPanel = styled.div`
   display: flex;
@@ -50,7 +50,7 @@ const StyledCartPanel = styled.div`
 
 function Cart(props) {
   const { cartItems, itemQuantity, total } = useSelector((state) => state.cart);
-  const cartTotal = formatCurrency(total);
+  const cartTotal = formatCurrencyToUSD(total);
 
   return (
     <StyledCartPanel className={props.className}>
