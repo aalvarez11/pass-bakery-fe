@@ -3,21 +3,20 @@ import Coffee from "./CoffeeList";
 import Breakfast from "./BreakfastList";
 import Breads from "./BreadList";
 
-const MenuContainer = styled.div`
+const StyledMenuContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 16px auto;
-  width: 72%;
+  margin: 4px 128px;
 `;
 
 function Menu(props) {
   return (
-    <MenuContainer>
+    <StyledMenuContainer>
       <Coffee secData={props.data.Coffee}></Coffee>
       <Breakfast secData={props.data.Breakfast}></Breakfast>
       <Breads secData={props.data.Bread}></Breads>
-    </MenuContainer>
+    </StyledMenuContainer>
   );
 }
 

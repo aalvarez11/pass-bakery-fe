@@ -1,62 +1,77 @@
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
+import { formatCurrencyToUSD } from "../helpers/formatCurrencyToUSD";
+import { addToCart } from "../redux/cartSlice";
 
-const Title = styled.h2`
+const StyledTitle = styled.h2`
   font-weight: bold;
   font-size: 24px;
-  margin-left: 32px;
+  margin-top: 16px;
   margin-bottom: 4px;
 `;
 
-const List = styled.ul`
+const StyledList = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 32px;
+  padding-left: 0px;
   list-style-type: none;
 `;
 
-const ListItem = styled.li`
-  width: 48%;
-  margin: 8px;
-`;
-
-const ItemButton = styled.button`
-  width: 100%;
-  background-color: white;
-  border: 2px solid lightgray;
-  border-radius: 4px;
-  &:hover {
-    background-color: lightgray;
+const StyledListItem = styled.li`
+  width: 512px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  button.itemButton {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+    &:hover {
+      border: 2px solid darkolivegreen;
+      background-color: whitesmoke;
+    }
+    span.itemButton__name {
+      margin-bottom: 8px;
+      font-size: large;
+      font-weight: bold;
+    }
+    span.itemButton__price {
+      font-style: italic;
+      color: gray;
+    }
   }
-`;
-
-const ButtonTitle = styled.span`
-  font-weight: bold;
-`;
-
-const ButtonPrice = styled.span`
-  font-style: italic;
-  color: gray;
 `;
 
 function BuildCategoryList(section) {
   const name = section.name;
   const offerings = section.offerings;
+  const dispatch = useDispatch();
 
   return (
     <>
-      <Title>{name}</Title>
-      <List>
+      <StyledTitle>{name}</StyledTitle>
+      <StyledList>
         {offerings.map((item, idx) => (
-          <ListItem key={idx}>
-            <ItemButton>
-              <ButtonTitle>{item.name}</ButtonTitle>
-              <br />
-              <ButtonPrice>${item.price}</ButtonPrice>
-            </ItemButton>
-          </ListItem>
+          <StyledListItem key={idx}>
+            <button
+              className="itemButton"
+              onClick={() => {
+                dispatch(addToCart(item));
+              }}
+            >
+              <span className="itemButton__name">{item.name}</span>
+              <span className="itemButton__price">
+                {formatCurrencyToUSD(item.price)}
+              </span>
+            </button>
+          </StyledListItem>
         ))}
-      </List>
+      </StyledList>
     </>
   );
 }
